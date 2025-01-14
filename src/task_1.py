@@ -25,6 +25,7 @@ class Calculator:
         :param operation: Строка, обозначающая требуемую операцию: "+", "-", "*", "/".
         :return: Результат вычисления (float или "ошибка" при делении на ноль или неверном типе операции).
         """
+
         if operation == "+":
             return first + second
         elif operation == "-":
@@ -49,6 +50,7 @@ class CalculatorApp:
         :param root: Окно (экземпляр tk.Tk), в котором будут размещаться все элементы.
         :param calculator: Экземпляр класса Calculator, выполняющий арифметические операции.
         """
+
         self.root = root
         self.calculator = calculator
         self.create_widgets()
@@ -57,6 +59,7 @@ class CalculatorApp:
         """
         Создаёт и размещает на форме все виджеты: поля ввода, кнопки операций и метку для результата.
         """
+
         # Поля ввода для двух чисел
         self.entry1 = tk.Entry(self.root, width=10)
         self.entry1.grid(row=0, column=0, columnspan=2, padx=5, pady=5)
@@ -89,6 +92,7 @@ class CalculatorApp:
         :param operation: Строка, обозначающая требуемую операцию: "+", "-", "*", "/".
         :return: None
         """
+
         try:
             num1 = float(self.entry1.get())
             num2 = float(self.entry2.get())
@@ -102,12 +106,13 @@ def main() -> None:
     """
     Главная функция: создаёт окно, инициализирует приложение калькулятора и запускает главный цикл.
     """
+
     root = tk.Tk()
     root.title("Калькулятор")
 
     # Создаем экземпляры калькулятора и приложения
-    calculator = Calculator()
-    app = CalculatorApp(root, calculator)
+    # calculator = Calculator()
+    # app = CalculatorApp(root, calculator)
 
     # Запускаем основной цикл обработки событий
     root.mainloop()
