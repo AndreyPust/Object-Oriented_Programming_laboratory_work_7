@@ -111,8 +111,8 @@ def main() -> None:
     root.title("Калькулятор")
 
     # Создаем экземпляры калькулятора и приложения
-    # calculator = Calculator()
-    # app = CalculatorApp(root, calculator)
+    calculator = Calculator()
+    app = CalculatorApp(root, calculator)
 
     # Запускаем основной цикл обработки событий
     root.mainloop()
